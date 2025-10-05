@@ -91,7 +91,7 @@ def predictProductivity(mode: str, depParam: dict, args={}):
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+CORS(app)
 
 @app.route('/predict', methods=['POST'])
 def predict():
